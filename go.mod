@@ -18,4 +18,4 @@ require (
 	xorm.io/xorm v1.2.5
 )
 
-replace github.com/go-xorm/xorm => github.com/pangpanglabs/xorm v0.6.7-0.20191028024856-98149f1c9e95
+replace github.com/go-xorm/xorm => github.com/devarchi33/xorm v0.6.7-0.20191028024856-98149f1c9e95
