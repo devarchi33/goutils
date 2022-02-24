@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pangpanglabs/goutils/cache"
-	"github.com/pangpanglabs/goutils/test"
+	"github.com/devarchi33/goutils/cache"
+	"github.com/devarchi33/goutils/test"
 )
 
 func TestLocal(t *testing.T) {

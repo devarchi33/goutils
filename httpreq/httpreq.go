@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/pangpanglabs/goutils/behaviorlog"
+	"github.com/devarchi33/goutils/behaviorlog"
 )
 
 const DefaultMaxIdleConnsPerHost = 100

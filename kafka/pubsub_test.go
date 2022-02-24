@@ -9,9 +9,10 @@ import (
 	"math/rand"
 	"testing"
 
+	"github.com/devarchi33/goutils/kafka"
+	"github.com/devarchi33/goutils/test"
+
 	"github.com/Shopify/sarama"
-	"github.com/pangpanglabs/goutils/kafka"
-	"github.com/pangpanglabs/goutils/test"
 )
 
 var (

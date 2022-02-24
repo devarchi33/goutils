@@ -1,8 +1,8 @@
 # goutils/cache
 
-Install `github.com/pangpanglabs/goutils/cache` package.
+Install `github.com/devarchi33/goutils/cache` package.
 ```golang
-go get -u github.com/pangpanglabs/goutils/cache
+go get -u github.com/devarchi33/goutils/cache
 ```
 
 ## Getting Started

@@ -11,11 +11,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/pangpanglabs/goutils/behaviorlog"
-
-	"github.com/pangpanglabs/goutils/httpreq"
-
-	"github.com/pangpanglabs/goutils/test"
+	"github.com/devarchi33/goutils/behaviorlog"
+	"github.com/devarchi33/goutils/httpreq"
+	"github.com/devarchi33/goutils/test"
 )
 
 func TestHttpreq(t *testing.T) {

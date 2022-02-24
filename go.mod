@@ -1,4 +1,4 @@
-module github.com/pangpanglabs/goutils
+module github.com/devarchi33/goutils
 
 go 1.15
 
