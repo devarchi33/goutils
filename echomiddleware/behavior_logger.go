@@ -12,7 +12,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/pangpanglabs/goutils/behaviorlog"
 	"github.com/pangpanglabs/goutils/kafka"
 	"github.com/sirupsen/logrus"

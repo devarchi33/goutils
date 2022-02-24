@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 type Template struct {

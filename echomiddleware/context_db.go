@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/pangpanglabs/goutils/ctxdb"
 	"github.com/pangpanglabs/goutils/kafka"
 	"xorm.io/xorm"
