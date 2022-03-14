@@ -1,12 +1,12 @@
 module github.com/devarchi33/goutils
 
-go 1.15
+go 1.16
 
 require (
 	github.com/Shopify/sarama v1.32.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gomodule/redigo v1.8.8
-	github.com/labstack/echo/v4 v4.6.3
+	github.com/labstack/echo/v4 v4.7.1
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.8.1
