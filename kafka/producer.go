@@ -26,7 +26,10 @@ func NewProducer(brokers []string, topic string, options ...func(*sarama.Config)
 
 	go func() {
 		for err := range producer.Errors() {
-			log.Printf(fmt.Sprintf("Failed to send log entry to kafka : error: [%v], brokers: [%v], kafkaConfig: [%v]\n", err.Error(), brokers, kafkaConfig))
+			log.Printf(fmt.Sprintf("Failed to send log entry to kafka : error: [%v]\n", err.Error()))
+			log.Printf(fmt.Sprintf("Failed to send log entry to kafka : brokers: [%v]\n", brokers))
+			log.Printf(fmt.Sprintf("Failed to send log entry to kafka : kafkaConfig: [%v]\n", kafkaConfig))
+			log.Printf(fmt.Sprintf("Failed to send log entry to kafka : producer: [%v]\n", producer))
 		}
 	}()
 
