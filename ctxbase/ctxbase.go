@@ -25,9 +25,6 @@ func FromCtx(ctx context.Context) *ContextBase {
 }
 
 func NewID() string {
-	u, err := uuid.NewV1()
-	if err != nil {
-		return ""
-	}
+	u := uuid.NewV1()
 	return u.String()
 }
