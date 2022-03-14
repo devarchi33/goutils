@@ -40,7 +40,7 @@ func BehaviorLogger(serviceName string, config kafka.Config, options ...func(*be
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) (err error) {
 			req := c.Request()
-			behaviorLogger := behaviorlog.New(serviceName, req, behaviorlog.KafkaProducer(producer))
+			behaviorLogger := behaviorlog.New(serviceName, req, producer, behaviorlog.KafkaProducer(producer))
 			if len(options) >= 0 {
 				for _, option := range options {
 					option(behaviorLogger)

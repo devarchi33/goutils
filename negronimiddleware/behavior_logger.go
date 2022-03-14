@@ -1,13 +1,10 @@
 package negronimiddleware
 
 import (
-	"context"
-	"net/http"
 	"os"
 	"time"
 
 	"github.com/Shopify/sarama"
-	"github.com/devarchi33/goutils/behaviorlog"
 	"github.com/devarchi33/goutils/kafka"
 	"github.com/sirupsen/logrus"
 )
@@ -34,17 +31,7 @@ func NewBehaviorLogger(serviceName string, brokers []string, topic string, optio
 
 	return &b
 }
-func (b *BehaviorLogger) ServeHTTP(rw http.ResponseWriter, req *http.Request, next http.HandlerFunc) {
-	behaviorLogger := behaviorlog.New(b.serviceName, req, behaviorlog.KafkaProducer(b.producer))
-	behaviorLogger.Hostname = b.hostname
 
-	next(rw, req.WithContext(context.WithValue(req.Context(),
-		behaviorlog.LogContextName, behaviorLogger,
-	)))
-
-	// behaviorLogger.Status = req.Response.StatusCode
-	behaviorLogger.Write()
-}
 func option(c *sarama.Config) {
 	c.Producer.RequiredAcks = sarama.WaitForLocal       // Only wait for the leader to ack
 	c.Producer.Compression = sarama.CompressionGZIP     // Compress messages
