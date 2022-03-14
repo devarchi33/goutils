@@ -142,6 +142,7 @@ func New(serviceName string, req *http.Request, options ...func(*LogContext)) *L
 	}
 
 	logrus.Info(fmt.Sprintf("LogContext: [%v]", c))
+	logrus.Info(fmt.Sprintf("LogContext Producer: [%v]", c.Producer))
 
 	return c
 }
