@@ -3,13 +3,13 @@ package ctxdb
 import (
 	"context"
 	"time"
-	"xorm.io/core"
 
 	"github.com/devarchi33/goutils/behaviorlog"
 	"github.com/devarchi33/goutils/ctxbase"
 	"github.com/devarchi33/goutils/kafka"
 
 	"xorm.io/xorm"
+	"xorm.io/xorm/log"
 )
 
 type ContextDB struct {
@@ -94,11 +94,11 @@ func (logger *dbLogger) Errorf(format string, v ...interface{}) {}
 func (logger *dbLogger) Debugf(format string, v ...interface{}) {}
 func (logger *dbLogger) Warnf(format string, v ...interface{})  {}
 
-func (logger *dbLogger) Debug(v ...interface{})   {}
-func (logger *dbLogger) Error(v ...interface{})   {}
-func (logger *dbLogger) Info(v ...interface{})    {}
-func (logger *dbLogger) Warn(v ...interface{})    {}
-func (logger *dbLogger) SetLevel(l core.LogLevel) {}
-func (logger *dbLogger) ShowSQL(show ...bool)     {}
-func (logger *dbLogger) Level() core.LogLevel     { return 0 }
-func (logger *dbLogger) IsShowSQL() bool          { return true }
+func (logger *dbLogger) Debug(v ...interface{})  {}
+func (logger *dbLogger) Error(v ...interface{})  {}
+func (logger *dbLogger) Info(v ...interface{})   {}
+func (logger *dbLogger) Warn(v ...interface{})   {}
+func (logger *dbLogger) SetLevel(l log.LogLevel) {}
+func (logger *dbLogger) ShowSQL(show ...bool)    {}
+func (logger *dbLogger) Level() log.LogLevel     { return 0 }
+func (logger *dbLogger) IsShowSQL() bool         { return true }
