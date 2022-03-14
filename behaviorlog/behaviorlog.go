@@ -2,6 +2,7 @@ package behaviorlog
 
 import (
 	"errors"
+	"fmt"
 	"net"
 	"net/http"
 	"net/url"
@@ -139,6 +140,8 @@ func New(serviceName string, req *http.Request, options ...func(*LogContext)) *L
 			o(c)
 		}
 	}
+
+	logrus.Info(fmt.Sprintf("LogContext: [%v]", c))
 
 	return c
 }
