@@ -72,7 +72,7 @@ func SetLogLevel(level logrus.Level) {
 	logger.SetLevel(level)
 }
 
-func New(serviceName string, req *http.Request, producer *kafka.Producer, options ...func(*LogContext)) *LogContext {
+func New(serviceName string, req *http.Request, options ...func(*LogContext)) *LogContext {
 	realIP := req.RemoteAddr
 	if ip := req.Header.Get(HeaderXForwardedFor); ip != "" {
 		realIP = strings.Split(ip, ", ")[0]
@@ -104,8 +104,8 @@ func New(serviceName string, req *http.Request, producer *kafka.Producer, option
 	}
 
 	c := &LogContext{
-		Producer: producer,
-		logger:   logger,
+		//Producer: producer,
+		logger: logger,
 
 		Service:        serviceName,
 		ParentActionID: req.Header.Get(HeaderXActionID),
